@@ -6,6 +6,10 @@
 .mt_150 {
   margin-top: 150px;
 }
+.mt_15 {
+  margin-top: 15px;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -110,4 +114,10 @@ border-left: 3px solid #367fa9;
 
 .breadcrumb a {
   color: #3c8dbc;
+}
+
+.table.table-bordered th,
+.table.table-bordered td {
+  text-align: center;
+  vertical-align: middle;
 }
