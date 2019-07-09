@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>院团委新媒体工作部搜索页</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="lib/fa/css/font-awesome.css">
+  <link rel="stylesheet" href="lib/mui/css/mui.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/search.css">
+</head>
+
+<body>
+  <!-- 大容器 -->
+  <div class="lt_container">
+    <!-- 顶部 -->
+    <div class="lt_header">
+      <a class="icon_left" href="index.html">
+        <span class="mui-icon mui-icon-home"></span>
+      </a>
+      <div class="texts">
+        <h4>院团委新媒体工作部搜索中心</h4>
+      </div>
+      <a class="icon_right" href="search.html">
+        <span class="mui-icon mui-icon-search"></span>
+      </a>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="lt_content">
+      <div class="mui-scroll-wrapper">
+        <div class="mui-scroll">
+          <!-- 搜索部分 -->
+          <div class="lt_search">
+            <input type="text" placeholder="请输入搜索关键字">
+            <button class="mui-btn mui-btn-primary">搜索</button>
+          </div>
+
+          <!-- 历史记录 -->
+          <div class="li_hisstory">
+
+            <!-- 模板引擎渲染处 -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- 底部内容 -->
+    <div class="lt_footer">
+      <ul>
+        <li class="now">
+          <a href="index.html">
+            <span class="mui-icon mui-icon-home"></span>
+            <p>首页</p>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="category.html">
+            <span class="mui-icon mui-icon-bars"></span>
+            <p>分类</p>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="index.html">
+            <span class="fa fa-shopping-cart"></span>
+            <p>购物车</p>
+          </a>
+        </li>
+      </ul>
+      <ul>
+        <li>
+          <a href="searchList.html">
+            <span class="fa fa-user"></span>
+            <p>成员中心</p>
+          </a>
+        </li>
+      </ul>
+
+    </div>
+
+  </div>
+
+
+  <script type="text/html" id="tpl">
+  {{if rows.length === 0}}
+    <p>没有更多的历史记录</p>
+  {{else}}
+  <div class="title mui-clearfix">
+    <span class="mui-pull-left">搜索历史</span>
+    <span class="mui-pull-right btn_empty">
+      <i class="fa fa-trash"></i>
+      清空记录
+    </span>
+  </div>
+  <div class="content">
+    <ul>
+      {{each rows v i}}
+      <li>
+        <a href="searchList.html?key={{v}}" class="mui-pull-left">{{v}}</a>
+        <span data-index="{{i}}" class="mui-icon mui-icon-closeempty mui-pull-right btn_delete"></span>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+  {{/if}}
+  </script>
+
+  <script src="lib/mui/js/mui.js"></script>
+  <script src="lib/zepto/zepto.min.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/search.js"></script>
+</body>
+
+</html>

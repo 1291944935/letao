@@ -1,0 +1,29 @@
+
+
+/* 历史记录 */
+
+.li_hisstory {
+  padding: 10px;
+  font-size: 12px;
+  color: #333333;
+}
+
+.li_hisstory .content ul {
+  border: 1px dashed #333333;
+}
+
+.li_hisstory .content li {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px dashed #333333;
+  padding-left: 10px;
+}
+
+.li_hisstory .content li:last-child {
+  border-bottom:none;
+}
+
+.li_hisstory .content span {
+  line-height: 30px;
+}
+
